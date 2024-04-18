@@ -23,12 +23,16 @@
 - (IBAction)AsynchButton:(id)sender {
     
     //1-URL:
-    NSURL *url = [NSURL URLWithString:@"https://www.yahoo.com/"];
+    NSURL *url = [[NSURL alloc] initWithString:@"https://www.yahoo.com/"];
     //2-Request
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     //3-Connection
     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     [connection start];
+    
+    
+
+
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection{
