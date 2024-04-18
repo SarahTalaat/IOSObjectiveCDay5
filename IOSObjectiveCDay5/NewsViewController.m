@@ -21,7 +21,7 @@
     
     _finalDataFromJson = [NSMutableData new];
     _jsonArray = [NSMutableArray new];
-    _dict = [NSMutableDictionary new];
+    _dictionaryFromJson = [NSMutableDictionary new];
 
     [self asynchTask];
 
@@ -58,8 +58,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    
-    cell.textLabel.text = @"News";
+    if(_jsonArray!=nil){
+      _dictionaryFromJson = _jsonArray[indexPath.row];
+    NSString *title = [_dictionaryFromJson objectForKey:@"title"];
+    cell.textLabel.text = title;
+    }
+   
     
     return cell;
     
@@ -83,6 +87,7 @@
     _jsonArray = [NSJSONSerialization JSONObjectWithData:self.finalDataFromJson options:NSJSONReadingAllowFragments error:nil];
     
     [_newsTable reloadData];
+
     
 
         

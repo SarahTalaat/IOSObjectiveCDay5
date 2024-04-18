@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSMutableData *finalDataFromJson;
 @property NSString *textFromJSON;
 @property NSString *imageFromJson;
-@property NSDictionary *dict;
+@property NSMutableDictionary *dictionaryFromJson;
 
 
 @end
