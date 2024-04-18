@@ -23,7 +23,8 @@
 - (IBAction)AsynchButton:(id)sender {
     
     //1-URL:
-    NSURL *url = [[NSURL alloc] initWithString:@"https://raw.githubusercontent.com/DevTides/NewsApi/master/news.json"];
+ //   NSURL *url = [[NSURL alloc] initWithString:@"https://raw.githubusercontent.com/DevTides/NewsApi/master/news.json"];
+    NSURL *url = [[NSURL alloc] initWithString:@"https://www.yahoo.com/"];
     
     //2-Request
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
@@ -35,20 +36,21 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection{
     printf("connectionDidFinishLoading\n");
-//    NSString *str = [[NSString alloc] initWithData:self.finalData encoding:NSUTF8StringEncoding];
-//
-//    self.textView.text = str;
-//
     
-    NSMutableArray *arr = [NSJSONSerialization JSONObjectWithData:self.finalData options:NSJSONReadingAllowFragments error:nil];
-    if(arr!=nil){
-        NSDictionary *dict = arr[0];
-        NSString *str = [dict objectForKey:@"title"];
-        _textView.text = str;
-    }
+    NSString *str = [[NSString alloc] initWithData:self.finalData encoding:NSUTF8StringEncoding];
+    self.textView.text = str;
+
+    
+//    NSMutableArray *arr = [NSJSONSerialization JSONObjectWithData:self.finalData options:NSJSONReadingAllowFragments error:nil];
+//    if(arr!=nil){
+//        NSDictionary *dict = arr[0];
+//        NSString *str = [dict objectForKey:@"title"];
+//        _textView.text = str;
+//    }
+    
+    
 }
-//
-//
+
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data{
     printf("didReceiveData\n");
