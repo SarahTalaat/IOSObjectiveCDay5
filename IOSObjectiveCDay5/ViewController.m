@@ -20,23 +20,11 @@
 }
 
 
-- (IBAction)asynchButton:(id)sender {
-    
-    //1-URL:
-    NSURL *url = [[NSURL alloc] initWithString:@"https://www.yahoo.com/"];
-    
-    //2-Request
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
-    //3-Connection
-    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    [connection start];
-
-}
-
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection{
     printf("connectionDidFinishLoading\n");
     
     NSString *str = [[NSString alloc] initWithData:self.finalData encoding:NSUTF8StringEncoding];
+
     self.textView.text = str;
 
     
@@ -51,17 +39,13 @@
 }
 
 
-- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data{
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
     printf("didReceiveData\n");
-//    NSString *str = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-//    _textView.text = str;
     [self.finalData appendData:data];
-    
 }
 
 
-
-- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler{
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
     printf("didReceiveResponse\n");
 }
 
@@ -71,6 +55,18 @@
 }
 
 
+
+- (IBAction)asynchButton:(UIButton *)sender {
+    //1-URL:
+    NSURL *url = [[NSURL alloc] initWithString:@"https://www.yahoo.com/"];
+                                                
+    
+    //2-Request
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    //3-Connection
+    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    [connection start];
+}
 
 - (IBAction)synchButton:(UIButton *)sender {
     
