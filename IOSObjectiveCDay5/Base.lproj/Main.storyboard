@@ -35,7 +35,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="AsynchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2nl-UL-m6V"/>
+                                    <action selector="asynchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2nl-UL-m6V"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="m74-rP-aL8">

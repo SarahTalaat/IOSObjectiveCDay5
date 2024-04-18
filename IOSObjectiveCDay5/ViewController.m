@@ -20,7 +20,7 @@
 }
 
 
-- (IBAction)AsynchButton:(id)sender {
+- (IBAction)asynchButton:(id)sender {
     
     //1-URL:
     NSURL *url = [[NSURL alloc] initWithString:@"https://www.yahoo.com/"];
@@ -56,6 +56,7 @@
 //    NSString *str = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
 //    _textView.text = str;
     [self.finalData appendData:data];
+    
 }
 
 
