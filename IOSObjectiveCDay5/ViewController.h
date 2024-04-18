@@ -13,7 +13,7 @@
 
 @property (strong, nonatomic) IBOutlet UITextView *textView;
 - (IBAction)synchButton:(UIButton *)sender;
-- (IBAction)AsynchButton:(id)sender;
+- (IBAction)asynchButton:(id)sender;
 
 @end
 

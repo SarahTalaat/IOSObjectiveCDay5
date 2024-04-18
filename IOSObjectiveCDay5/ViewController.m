@@ -20,10 +20,11 @@
 }
 
 
-- (IBAction)AsynchButton:(id)sender {
+- (IBAction)asynchButton:(id)sender {
     
     //1-URL:
  //   NSURL *url = [[NSURL alloc] initWithString:@"https://raw.githubusercontent.com/DevTides/NewsApi/master/news.json"];
+    
     NSURL *url = [[NSURL alloc] initWithString:@"https://www.yahoo.com/"];
     
     //2-Request
