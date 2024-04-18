@@ -7,9 +7,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UITextView *textView;
+@interface ViewController : UIViewController <NSURLConnectionDelegate,NSURLConnectionDataDelegate>
 
+@property NSMutableData *finalData;
+
+@property (strong, nonatomic) IBOutlet UITextView *textView;
 - (IBAction)synchButton:(UIButton *)sender;
 - (IBAction)AsynchButton:(id)sender;
 

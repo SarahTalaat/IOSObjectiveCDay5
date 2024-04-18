@@ -17,19 +17,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HtC-zh-66c">
-                                <rect key="frame" x="71" y="693" width="65" height="31"/>
+                                <rect key="frame" x="47" y="693" width="132" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Synch"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Synch">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="synchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EaD-Do-meh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgr-O9-LuL">
-                                <rect key="frame" x="260" y="693" width="72" height="31"/>
+                                <rect key="frame" x="226" y="693" width="139" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Asynch"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Asynch">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="AsynchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2nl-UL-m6V"/>
                                 </connections>
