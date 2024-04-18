@@ -19,7 +19,6 @@
 		B690213B2BD1008200A0AF77 /* IOSObjectiveCDay5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B690213A2BD1008200A0AF77 /* IOSObjectiveCDay5Tests.m */; };
 		B69021452BD1008300A0AF77 /* IOSObjectiveCDay5UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B69021442BD1008300A0AF77 /* IOSObjectiveCDay5UITests.m */; };
 		B69021472BD1008300A0AF77 /* IOSObjectiveCDay5UITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B69021462BD1008300A0AF77 /* IOSObjectiveCDay5UITestsLaunchTests.m */; };
-		B69021552BD1235400A0AF77 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B69021542BD1235400A0AF77 /* NewsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +60,6 @@
 		B69021402BD1008300A0AF77 /* IOSObjectiveCDay5UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSObjectiveCDay5UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B69021442BD1008300A0AF77 /* IOSObjectiveCDay5UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IOSObjectiveCDay5UITests.m; sourceTree = "<group>"; };
 		B69021462BD1008300A0AF77 /* IOSObjectiveCDay5UITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IOSObjectiveCDay5UITestsLaunchTests.m; sourceTree = "<group>"; };
-		B69021532BD1235400A0AF77 /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
-		B69021542BD1235400A0AF77 /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		DC60A99A1FFC0460C1230897 /* Pods-IOSObjectiveCDay5-IOSObjectiveCDay5UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSObjectiveCDay5-IOSObjectiveCDay5UITests.release.xcconfig"; path = "Target Support Files/Pods-IOSObjectiveCDay5-IOSObjectiveCDay5UITests/Pods-IOSObjectiveCDay5-IOSObjectiveCDay5UITests.release.xcconfig"; sourceTree = "<group>"; };
 		F673B3185BD7131292A1D871 /* Pods-IOSObjectiveCDay5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSObjectiveCDay5.release.xcconfig"; path = "Target Support Files/Pods-IOSObjectiveCDay5/Pods-IOSObjectiveCDay5.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,7 +99,6 @@
 				955EDC623A72E1DDC5DC54CE /* Pods-IOSObjectiveCDay5-IOSObjectiveCDay5UITests.debug.xcconfig */,
 				DC60A99A1FFC0460C1230897 /* Pods-IOSObjectiveCDay5-IOSObjectiveCDay5UITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -142,8 +138,6 @@
 				B690212C2BD1008200A0AF77 /* LaunchScreen.storyboard */,
 				B690212F2BD1008200A0AF77 /* Info.plist */,
 				B69021302BD1008200A0AF77 /* main.m */,
-				B69021532BD1235400A0AF77 /* NewsViewController.h */,
-				B69021542BD1235400A0AF77 /* NewsViewController.m */,
 			);
 			path = IOSObjectiveCDay5;
 			sourceTree = "<group>";
@@ -355,7 +349,6 @@
 			files = (
 				B69021262BD1008100A0AF77 /* ViewController.m in Sources */,
 				B69021202BD1008100A0AF77 /* AppDelegate.m in Sources */,
-				B69021552BD1235400A0AF77 /* NewsViewController.m in Sources */,
 				B69021312BD1008200A0AF77 /* main.m in Sources */,
 				B69021232BD1008100A0AF77 /* SceneDelegate.m in Sources */,
 			);
