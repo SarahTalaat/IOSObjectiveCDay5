@@ -9,9 +9,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NewsViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
+@interface NewsViewController : UIViewController <UITableViewDelegate,UITableViewDataSource, NSURLConnectionDelegate,NSURLConnectionDataDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *newsTable;
+@property NSMutableArray *jsonArray;
+@property NSMutableData *finalDataFromJson;
+@property NSString *textFromJSON;
+@property NSString *imageFromJson;
+
 
 @end
 

@@ -18,8 +18,24 @@
     // Do any additional setup after loading the view.
     self.newsTable.delegate = self;
     self.newsTable.dataSource = self;
+    
+    _finalDataFromJson = [NSMutableData new];
+    _jsonArray = [NSMutableArray new];
+
+    [self asynchTask];
+
+
 }
 
+-(void) asynchTask{
+    //1-URL:
+    NSURL *url = [[NSURL alloc] initWithString:@"https://raw.githubusercontent.com/DevTides/NewsApi/master/news.json"];
+    //2-Request
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    //3-Connection
+    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    [connection start];
+}
 /*
 #pragma mark - Navigation
 
@@ -35,7 +51,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return  5;
+    return  [_jsonArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -44,5 +60,29 @@
     cell.textLabel.text = @"News";
     return cell;
     
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{
+    printf("didReceiveData\n");
+    [self.finalDataFromJson appendData:data];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
+    printf("didReceiveResponse\n");
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
+    printf("didFailWithError\n");
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection{
+    printf("connectionDidFinishLoading\n");
+    _jsonArray = [NSJSONSerialization JSONObjectWithData:self.finalDataFromJson options:NSJSONReadingAllowFragments error:nil];
+    
+        if(_jsonArray!=nil){
+
+           
+        }
+        
 }
 @end
