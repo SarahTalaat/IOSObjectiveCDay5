@@ -47,7 +47,8 @@
         _textView.text = str;
     }
 }
-
+//
+//
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data{
     printf("didReceiveData\n");
