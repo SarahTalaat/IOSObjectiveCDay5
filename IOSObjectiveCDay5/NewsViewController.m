@@ -6,6 +6,7 @@
 //
 
 #import "NewsViewController.h"
+#import <SDWebImage/SDWebImage.h>
 
 @interface NewsViewController ()
 
@@ -61,6 +62,10 @@
     if(_jsonArray!=nil){
       _dictionaryFromJson = _jsonArray[indexPath.row];
     NSString *title = [_dictionaryFromJson objectForKey:@"title"];
+    NSString *image = [_dictionaryFromJson objectForKey:@"imageUrl"];
+        
+
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:image] placeholderImage:[UIImage imageNamed:@"Loading.png"]];
     cell.textLabel.text = title;
     }
    
