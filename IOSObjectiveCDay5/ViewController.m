@@ -24,7 +24,8 @@
 
 - (IBAction)synchButton:(UIButton *)sender {
     
-    NSURL *url = [[NSURL alloc] initWithString:@""];
+    NSURL *url = [[NSURL alloc] initWithString:@"https://www.yahoo.com/"];
     NSString *str = [[NSString alloc] initWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+    _textView.text = str;
 }
 @end
