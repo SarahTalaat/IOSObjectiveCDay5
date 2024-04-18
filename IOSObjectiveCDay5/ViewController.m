@@ -78,4 +78,5 @@
     NSString *str = [[NSString alloc] initWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
     _textView.text = str;
 }
+
 @end
