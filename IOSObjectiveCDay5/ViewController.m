@@ -19,4 +19,12 @@
 }
 
 
+- (IBAction)AsynchButton:(id)sender {
+}
+
+- (IBAction)synchButton:(UIButton *)sender {
+    
+    NSURL *url = [[NSURL alloc] initWithString:@""];
+    NSString *str = [[NSString alloc] initWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+}
 @end
