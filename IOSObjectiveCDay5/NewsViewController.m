@@ -21,6 +21,7 @@
     
     _finalDataFromJson = [NSMutableData new];
     _jsonArray = [NSMutableArray new];
+    _dict = [NSMutableDictionary new];
 
     [self asynchTask];
 
@@ -57,7 +58,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    
     cell.textLabel.text = @"News";
+    
     return cell;
     
 }
@@ -79,10 +82,9 @@
     printf("connectionDidFinishLoading\n");
     _jsonArray = [NSJSONSerialization JSONObjectWithData:self.finalDataFromJson options:NSJSONReadingAllowFragments error:nil];
     
-        if(_jsonArray!=nil){
+    [_newsTable reloadData];
+    
 
-           
-        }
         
 }
 @end
