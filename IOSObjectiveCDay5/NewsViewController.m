@@ -67,6 +67,7 @@
 
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString:image] placeholderImage:[UIImage imageNamed:@"Loading.png"]];
     cell.textLabel.text = title;
+    
     }
    
     
